@@ -185,7 +185,7 @@ export default {
           apellido: this.apellido,
           cargo: this.cargo,
           especialidad: this.especialidad,
-          tipo_documento: this.tipoDocumento,
+          tipoDocumento: this.tipoDocumento,
           numero: this.numero,
         };
         store.dispatch("crearProfesional", objProfesional).then(() => {
@@ -205,7 +205,7 @@ export default {
     },
     btnEliminar(id) {
       let obj = {
-        id: id,
+        _id: id,
       };
       store.dispatch("eliminarProfesional", obj).then(() => {
         store.dispatch("cargarProfesionales");

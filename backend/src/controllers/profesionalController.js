@@ -7,6 +7,7 @@ class ProfesionalController {
 
     crearProfesional(req, res) {
         profesional.create(req.body, (error, data) => {
+            console.log(req.body)
             if (error) {
                 res.status(500).json({ error });
             } else {
