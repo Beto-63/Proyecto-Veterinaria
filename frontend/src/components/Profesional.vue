@@ -205,7 +205,7 @@ export default {
     },
     btnEliminar(id) {
       let obj = {
-        _id: id,
+        id: id,
       };
       store.dispatch("eliminarProfesional", obj).then(() => {
         store.dispatch("cargarProfesionales");
