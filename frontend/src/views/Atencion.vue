@@ -1,7 +1,19 @@
-<template></template>
+<template>
+  <div>
+    <navbar />
+    <cliente />
+  </div>
+</template>
 
 <script>
-export default {};
+import Navbar from "../components/Navbar.vue";
+import Cliente from "../components/Cliente2.vue";
+export default {
+  components: {
+    Navbar,
+    Cliente,
+  },
+};
 </script>
 
 <style>

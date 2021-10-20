@@ -185,7 +185,7 @@ export default {
           apellido: this.apellido,
           cargo: this.cargo,
           especialidad: this.especialidad,
-          tipo_documento: this.tipoDocumento,
+          tipoDocumento: this.tipoDocumento,
           numero: this.numero,
         };
         store.dispatch("crearProfesional", objProfesional).then(() => {
