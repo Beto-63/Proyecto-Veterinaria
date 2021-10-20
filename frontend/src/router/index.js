@@ -11,17 +11,17 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'HomeView',
+    name: 'Home',
     component: Home
   },
   {
     path: '/Administrador',
-    name: 'Crear Profesionales',
+    name: 'Crear_Profesionales',
     component: Administrador
   },
   {
     path: '/Atencion',
-    name: 'Atencion Mascotas',
+    name: 'Atencion_Mascotas',
     component: Atencion
   },
 
