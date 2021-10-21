@@ -157,7 +157,6 @@
 
 <script>
 import store from "../store/index.js";
-const url = "http://localhost:3000/users";
 export default {
   data() {
     return {
@@ -205,7 +204,7 @@ export default {
     },
     btnEliminar(id) {
       let obj = {
-        id: id,
+        id,
       };
       store.dispatch("eliminarProfesional", obj).then(() => {
         store.dispatch("cargarProfesionales");
