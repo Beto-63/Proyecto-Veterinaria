@@ -1,5 +1,5 @@
 <template>
-  <div class="create-cliente-view">
+  <div class="ajustar-form">
     <!------FORMULARIO PARA CREAR CLIENTES----->
     <div>
       <h2 class="title">Iniciar Atención</h2>
@@ -127,7 +127,7 @@
       </button>
     </div>
     <!-----TABLA DE MASCOTAS----->
-    <table class="table table-striped table-hover">
+    <table id="tabla" class="table table-striped table-hover">
       <!---Cabecera de la tabla---->
       <thead>
         <tr>
@@ -171,7 +171,6 @@
 
 <script>
 import store from "../store/index.js";
-const url = "http://localhost:3000/users";
 export default {
   data() {
     return {
@@ -201,5 +200,10 @@ export default {
 <style>
 .create-cliente-view {
   padding: 10px;
+  margin-bottom: 100px;
+}
+
+#tabla{
+  margin-top: 50px;
 }
 </style>
