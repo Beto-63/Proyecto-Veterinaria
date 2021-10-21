@@ -188,14 +188,12 @@ export default {
       atencion: null,
       idMascota: null,
       objAtencion: null,
-      clienteSeleccionado = false,
-      mascotaSeleccionada = false,
+      clienteSeleccionado: false,
+      mascotaSeleccionada: false,
     };
   },
   methods: {
-
-//Aquie es donde debo definir la funcionalidad
-
+    //Aquie es donde debo definir la funcionalidad
   },
   created: () => {
     store.dispatch("cargarClientes");
@@ -209,8 +207,8 @@ export default {
 </script>
 
 <style>
-
-#tabla{
+#tabla {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 </style>
