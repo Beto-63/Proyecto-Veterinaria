@@ -1,7 +1,7 @@
 <template>
   <div class="ajustar-form">
-    <h2 class="title">Formulario Mascota</h2>
-    <form class="row g-3">
+  <h2>Mascota:</h2>
+      <form class="row g-3">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Nombre</label>
         <input
@@ -12,6 +12,7 @@
           placeholder="Ej: Mateo"
         />
       </div>
+
       <div class="col-6">
         <label for="inputState" class="form-label">Especie</label>
         <select v-model="especieMascota" id="inputState" class="form-select">
