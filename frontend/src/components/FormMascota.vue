@@ -1,7 +1,7 @@
 <template>
-  <div class="form-mascota">
-    <h1>Mascota:</h1>
-    <form class="row g-3">
+  <div class="ajustar-form">
+  <h2>Mascota:</h2>
+      <form class="row g-3">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Nombre</label>
         <input
@@ -12,29 +12,30 @@
           placeholder="Ej: Mateo"
         />
       </div>
-      <div class="col-md-6">
+
+      <div class="col-6">
         <label for="inputState" class="form-label">Especie</label>
         <select v-model="especieMascota" id="inputState" class="form-select">
           <option selected v-for="esp in especies" :key="esp">{{ esp }}</option>
         </select>
       </div>
       <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Fecha Nacimiento</label>
+        <label for="inputFecha" class="form-label">Fecha Nacimiento</label>
         <input
           v-model="fechaMascota"
           type="date"
           class="form-control"
-          id="inputEmail4"
+          id="inputFecha"
         />
       </div>
-      <div class="col-md-6">
-        <label for="inputState" class="form-label">Género</label>
-        <select v-model="generoMascota" id="inputState" class="form-select">
+      <div class="col-6">
+        <label for="inputGenero" class="form-label">Género</label>
+        <select v-model="generoMascota" id="inputGenero" class="form-select">
           <option>Femenimo</option>
           <option>Masculino</option>
         </select>
       </div>
-      <div class="col-5">
+      <div class="col-6">
         <label for="inputAddress" class="form-label"
           >Número documento propietario</label
         >
@@ -45,6 +46,15 @@
           id="inputAddress"
           placeholder="Ej: 102020202"
         />
+      </div>
+
+      <div class="col-10">
+        <button
+          type="button"
+          class="btn btn-success"
+        >
+          Atender
+        </button>
       </div>
     </form>
   </div>
@@ -66,7 +76,7 @@ export default {
 </script>
 
 <style>
-.form-mascota {
-  margin: 30px;
+.ajustar-form {
+  padding: 10px;
 }
 </style>
