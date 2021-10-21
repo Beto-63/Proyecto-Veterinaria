@@ -1,114 +1,123 @@
 <template>
-  <div class="create-user-view">
+  <div class="form-profesional">
     <!------FORMULARIO PARA CREAR PROFESIONALES----->
-    <div>
-      <h2 class="title">Crear Profesional</h2>
+    <h1>Crear Profesional:</h1>
+    <form class="row g-3">
       <!-----Fila para el nombre y apellido del profesional-->
-      <div class="row">
-        <!--Nombre-->
-        <div class="col-6 mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="nombre"
-            placeholder="Nombre"
-            v-model="nombre"
-          />
-        </div>
-        <!--Apellido-->
-        <div class="col-6 mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="apellido"
-            placeholder="Apellido"
-            v-model="apellido"
-          />
-        </div>
+
+      <!--Nombre-->
+      <div class="col-6 mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          placeholder="Ej: Maria José"
+          v-model="nombre"
+        />
       </div>
+      <!--Apellido-->
+      <div class="col-6 mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apellido"
+          placeholder="Ej: Cortes Madero"
+          v-model="apellido"
+        />
+      </div>
+
       <!-------Fila para cargo y Especialidad---->
-      <div class="row">
-        <!--Cargos-->
-        <div class="col-6 mb-3">
-          <select
-            v-model="cargo"
-            class="form-select"
-            aria-label="Default select example"
-          >
-            <option selected value="null">Cargo</option>
-            <option value="Vaterinario">Veterinario</option>
-            <option value="Enfermero">Enferemero</option>
-            <option value="Ayudante">Ayudante</option>
-          </select>
-        </div>
-        <!--Descripción-->
-        <div class="col-6 mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="especialidad"
-            placeholder="Especialidad"
-            v-model="especialidad"
-          />
-        </div>
+
+      <!--Cargos-->
+      <div class="col-6 mb-3">
+        <label for="cargo" class="form-label">cargo</label>
+        <select
+          v-model="cargo"
+          id="cargo"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected value="null">Cargo</option>
+          <option value="Vaterinario">Veterinario</option>
+          <option value="Enfermero">Enferemero</option>
+          <option value="Ayudante">Ayudante</option>
+        </select>
       </div>
+      <!--Descripción-->
+      <div class="col-6 mb-3">
+        <label for="Especilidad" class="form-label">Especialidad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="especialidad"
+          placeholder="Ej: Perros y Aves"
+          v-model="especialidad"
+        />
+      </div>
+
       <!-------Fila para Tipo Documento y numero---->
-      <div class="row">
-        <!--tipo de documento-->
-        <div class="col-6 mb-3">
-          <select
-            v-model="tipoDocumento"
-            class="form-select"
-            aria-label="Default select example"
-          >
-            <option selected value="null">Tipo de Documento</option>
-            <option value="Cedula">Cedula de Ciudadania</option>
-            <option value="TIdentidad">Tarjeta de Identidad</option>
-            <option value="CExtranjeria">Cedula Extranjeria</option>
-            <option value="Pasaporte">Pasaporte</option>
-          </select>
-        </div>
-        <!--numero-->
-        <div class="col-6 mb-3">
-          <input
-            type="number"
-            class="form-control"
-            id="numero"
-            placeholder="Numero"
-            v-model="numero"
-          />
-        </div>
+
+      <!--tipo de documento-->
+      <div class="col-6 mb-3">
+        <label for="tipoDocumento" class="form-label">Especie</label>
+        <select
+          v-model="tipoDocumento"
+          id="tipoDocumento"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected value="null">Tipo de Documento</option>
+          <option value="Cedula">Cedula de Ciudadania</option>
+          <option value="TIdentidad">Tarjeta de Identidad</option>
+          <option value="CExtranjeria">Cedula Extranjeria</option>
+          <option value="Pasaporte">Pasaporte</option>
+        </select>
       </div>
-      <!-----Botón de registro--->
-      <button
-        v-if="id == null"
-        type="button"
-        class="btn btn-success"
-        @click="btnRegistrarProfesional"
-      >
-        Registrar
-      </button>
-      &nbsp;
-      <!----Botón cancelar---->
-      <button
-        v-if="id != null"
-        type="button"
-        class="btn btn-secondary"
-        @click="limpiarCampos"
-      >
-        Cancelar
-      </button>
-      &nbsp;
-      <!---botón de actualizar---->
-      <button
-        v-if="id != null"
-        type="button"
-        class="btn btn-warning"
-        @click="btnActualizar"
-      >
-        Actualizar
-      </button>
-    </div>
+      <!--numero-->
+      <div class="col-6 mb-3">
+        <label for="nimero" class="form-label">Numero</label>
+        <input
+          type="number"
+          class="form-control"
+          id="numero"
+          placeholder="Ej: 102020202"
+          v-model="numero"
+        />
+      </div>
+    </form>
+    <br />
+    <!-----Botón de registro--->
+    <button
+      v-if="id == null"
+      type="button"
+      class="btn btn-success"
+      @click="btnRegistrarProfesional"
+    >
+      Registrar
+    </button>
+    &nbsp;
+    <!----Botón cancelar---->
+    <button
+      v-if="id != null"
+      type="button"
+      class="btn btn-secondary"
+      @click="limpiarCampos"
+    >
+      Cancelar
+    </button>
+    &nbsp;
+    <!---botón de actualizar---->
+    <button
+      v-if="id != null"
+      type="button"
+      class="btn btn-warning"
+      @click="btnActualizar"
+    >
+      Actualizar
+    </button>
+    <br /><br />
     <!-----TABLA DE PROFESIONALES----->
     <table class="table table-striped table-hover">
       <!---Cabecera de la tabla---->
@@ -250,7 +259,7 @@ export default {
 </script>
 
 <style>
-.create-user-view {
-  padding: 10px;
+.form-profesional {
+  padding: 30px;
 }
 </style>

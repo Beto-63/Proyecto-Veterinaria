@@ -1,0 +1,3 @@
+Retorna los Objetos mascota con coincidencia de idPropietario
+Esta nos permitira listar las mascotas de un usuario
+db.mascota.find({idPropietario : "616dcc54e02bf5335ff231e6"});

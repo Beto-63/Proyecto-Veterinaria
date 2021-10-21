@@ -1,6 +1,6 @@
 <template>
   <div class="form-mascota">
-    <h1>Formulario Mascota</h1>
+    <h1>Mascota:</h1>
     <form class="row g-3">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Nombre</label>
@@ -12,7 +12,7 @@
           placeholder="Ej: Mateo"
         />
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <label for="inputState" class="form-label">Especie</label>
         <select v-model="especieMascota" id="inputState" class="form-select">
           <option selected v-for="esp in especies" :key="esp">{{ esp }}</option>
@@ -27,7 +27,7 @@
           id="inputEmail4"
         />
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <label for="inputState" class="form-label">Género</label>
         <select v-model="generoMascota" id="inputState" class="form-select">
           <option>Femenimo</option>
@@ -67,6 +67,6 @@ export default {
 
 <style>
 .form-mascota {
-  margin: 100px;
+  margin: 30px;
 }
 </style>
